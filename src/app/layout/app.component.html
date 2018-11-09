@@ -1,0 +1,22 @@
+{{refreshName()}}
+<!-- <h2>Header</h2> -->
+<div class="header">
+    <ul>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><p> | </p></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    </ul>
+<p class="greeting">Hello {{myName}}! </p>
+</div>
+<!-- Where router should display a view -->
+<router-outlet></router-outlet>
+
+<!-- <h3>Footer</h3> -->
+<div class="footer">
+    <ul>
+        <li><p>Home</p></li>
+        <li><p> | </p></li>
+        <li><p>About</p></li>
+    </ul>
+    <p class="credit">Uses https://www.cryptocompare.com/api/</p>
+</div>

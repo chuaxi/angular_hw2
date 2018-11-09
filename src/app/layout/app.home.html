@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let crcy of currencyArray">
+    <a routerLink="/detail/{{crcy.symbol}}" routerLinkActive="active">{{crcy.name}}</a>
+    {{ crcy.symbol }}
+    {{ crcy.price  }}
+    <arrow [priceClose]="crcy.close" [priceOpen]="crcy.open"></arrow>
+    </li>
+</ul>

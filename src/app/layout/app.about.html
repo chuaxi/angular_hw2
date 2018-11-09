@@ -1,0 +1,4 @@
+<p>Please enter your name here</p>
+<input type="text" name="username" pattern="[a-zA-Z]+ [a-zA-Z]+"
+        required [(ngModel)]="myName" #username="ngModel">
+<button type="submit" [disabled]="!username.valid" (click)="setName()">Submit</button>
