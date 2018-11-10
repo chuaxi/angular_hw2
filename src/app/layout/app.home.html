@@ -1,5 +1,5 @@
 <ul>
-        <li *ngFor="let crcy of currencyArray">
+        <li *ngFor="let crcy of this.currencyArray">
                 <a routerLink="/detail/{{crcy.symbol}}" routerLinkActive="active">{{crcy.name}}</a>
                 <p class="symbol">{{ crcy.symbol }}</p>
                 <p class="price">{{crcy.price | currencyPipe}}</p>

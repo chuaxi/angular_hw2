@@ -5,6 +5,7 @@ import { CryptoCurrencyType, coinList } from './CryptoModel';
 
 @Component({
     templateUrl: "./layout/app.detail.html",
+    styleUrls: ["./style/app.detail.css"],
     providers: [MyCurrencyService]
 })
 export class DetailComponent { 

@@ -1,9 +1,21 @@
-<img src={{coinType.img}} >
-<p>{{coinType.price}}</p>
-<div *ngIf="coinType.close&&coinType.open"><arrow [isIncreased]="this.currencyService.comparePrice(coinType.open,coinType.close)"></arrow></div>
-<p>{{coinType.open}}</p>
-<p>{{coinType.close}}</p>
-    <br/><br/>
+<div class="wrapper">
+    <img src={{coinType.img}}>
 
-    <!-- Draw up and down arrows -->
-    &uarr; &darr;
+    <p>{{coinType.name}}</p>
+
+    <div class="rowTitle">
+        <p>{{coinType.symbol}}</p>
+        <p>Open</p>
+        <p>Close</p>
+    </div>
+
+    <div class="price">
+        <p>{{coinType.price}}</p>
+        <p>{{coinType.open}}</p>
+        <p>{{coinType.close}}</p>
+    </div>
+
+    <div *ngIf="coinType.close&&coinType.open">
+        <arrow [isIncreased]="this.currencyService.comparePrice(coinType.open,coinType.close)"></arrow>
+    </div>
+</div>
