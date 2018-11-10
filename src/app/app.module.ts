@@ -8,10 +8,12 @@ import { AboutComponent } from './app.about';
 import { DetailComponent } from './app.detail';
 import { ArrowComponent } from './app.arrow'; 
 import { routing }        from './app.routing';
+import { CurrencyPipe }   from './app.currencypipe';
 
 @NgModule({
   declarations: [
-    AppComponent, DetailComponent, HomeComponent, AboutComponent, ArrowComponent
+    AppComponent, DetailComponent, HomeComponent, AboutComponent, ArrowComponent,
+    CurrencyPipe
   ],
   imports: [
     BrowserModule, HttpModule, routing, FormsModule

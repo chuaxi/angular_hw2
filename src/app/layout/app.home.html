@@ -1,8 +1,10 @@
 <ul>
-    <li *ngFor="let crcy of currencyArray">
-    <a routerLink="/detail/{{crcy.symbol}}" routerLinkActive="active">{{crcy.name}}</a>
-    {{ crcy.symbol }}
-    {{ crcy.price  }}
-    <arrow [priceClose]="crcy.close" [priceOpen]="crcy.open"></arrow>
-    </li>
+        <li *ngFor="let crcy of currencyArray">
+                <a routerLink="/detail/{{crcy.symbol}}" routerLinkActive="active">{{crcy.name}}</a>
+                <p class="symbol">{{ crcy.symbol }}</p>
+                <p class="price">{{crcy.price | currencyPipe}}</p>
+                <div *ngIf="crcy.close&&crcy.open">
+                        <arrow [isIncreased]="this.currencyService.comparePrice(crcy.open,crcy.close)"></arrow>
+                </div>
+        </li>
 </ul>

@@ -27,12 +27,17 @@ export class MyCurrencyService {  //for BTC
     }
 
     
-    getCoinArrayIndex(abbreviation) {
+    getCoinArrayIndex(abbreviation: string) {
         for(var i=0; i<coinList.length; i++) {
             if(coinList[i].symbol == abbreviation) {
                 return i;
             }
         }
+    }
+
+    comparePrice(open: number, close: number): boolean {
+        if(open>close) return false;
+        else return true;
     }
 
     private extractData(res: Response) {
